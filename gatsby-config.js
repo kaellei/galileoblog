@@ -41,16 +41,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-next`,
     {
-      resolve: `gatsby-plugin-algolia`,
-      options: {
-        appId: process.env.ALGOLIA_APP_ID ? process.env.ALGOLIA_APP_ID : "62848STM4S",
-        apiKey: process.env.ALGOLIA_ADMIN_API_KEY ? process.env.ALGOLIA_ADMIN_API_KEY : "442744992713f654307c0d3378d8fdcc",
-        indexName: process.env.ALGOLIA_INDEX_NAME ? process.env.ALGOLIA_INDEX_NAME : "index name to target",
-        queries,
-        chunkSize: 10000 // default: 1000
-      }
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/posts/`,
